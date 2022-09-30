@@ -151,11 +151,24 @@ a:visited
 	width: 255px;
 	padding-right: 1px;
 	vertical-align: top;
+	position: relative;
+	cursor: pointer;
 }
 
-.newsCard:nth-child(odd)
+.newsCard:nth-child(even)
 {
 	background-color: #fff;
+}
+
+.newsCard .link
+{
+	opacity: 1;
+}
+
+.newsCard:hover .link
+{
+	opacity: 0.5;
+	transition: opacity 0.3s ease-in-out;
 }
 
 .subtitle
@@ -164,16 +177,6 @@ a:visited
 	font-weight: 700;
 	margin-left: 10px;
 	color: #0c0c55;
-}
-
-.newsCard:hover
-{
-	opacity: 0.9;
-}
-
-.news img:hover
-{
-	opacity: 0.8;
 }
 
 .desc
