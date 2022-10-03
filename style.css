@@ -5,13 +5,15 @@ body
 	font-family: 'Lato', sans-serif;
 }
 
-.pasek
+header
 {
 	width: 100%;
 	height: 65px;
 	background-color: #ffffff;
 	border-radius: 2px;
 	box-shadow: 0 0 5px #939393;
+	position: fixed;
+	z-index: 2;
 }
 
 .logo
@@ -24,7 +26,7 @@ body
 	padding-right: 12px;
 }
 
-button
+.sign
 {
 	float:right;
 	margin-top: 12px;
@@ -38,27 +40,25 @@ button
 	margin-right: auto;
 	width:1024px;
 	margin-top: -16px;
+	position: relative;
+	top: 66px;
 }
 
-.topbar
+.navigate
 {
 	background-color: #1f1f7b;
 	color: white;
 	font-weight: 700;
-}
-
-.topbar ul
-{
 	list-style-type: none;
 }
 
-.topbar ul > li
+.navigate li
 {
 	display: inline-block;
 	padding: 20px;
 }
 
-.topbar li:hover
+.navigate li:hover
 {
 	cursor: pointer;
 	background-color: #2f2f8c;
@@ -84,16 +84,16 @@ button
 
 .mainnews
 {
-	width: 682.66px;
+	width: 683px;
 	height: 400px;
 	background-color: yellow;
 	display: inline-block;
 	margin-bottom: 10px;
 }
 
-.polecane
+.recommended
 {
-	width: 331.33px;
+	width: 332px;
 	height: 400px;
 	display: inline-block;
 	vertical-align: top;
@@ -101,13 +101,13 @@ button
 	margin-bottom: 10px;
 }
 
-.polecane img
+.recommended img
 {
 	width: 22px;
 	height: 22px;
 }
 
-.polecane h1
+.recommended h3
 {
 	font-size: 20px;
 	margin-left: 10px;
@@ -115,11 +115,16 @@ button
 	border-bottom: 1px solid #d7dfdd;
 }
 
-.polecane p
+.recommended p
 {
 	margin-left: 10px;
 	font-size: 14px;
 	padding: 5px;
+}
+
+.bgcolor
+{
+	background-color: #f7fbfa;
 }
 
 a:link
@@ -138,13 +143,19 @@ a:visited
 	width: 100%;
 }
 
-.txt1
+.newsCard
 {
 	display:inline-block;
 	background-color: #f6f6f6;
 	height: 305px;
 	width: 255px;
 	padding-right: 1px;
+	vertical-align: top;
+}
+
+.newsCard:nth-child(odd)
+{
+	background-color: #fff;
 }
 
 .subtitle
@@ -155,21 +166,12 @@ a:visited
 	color: #0c0c55;
 }
 
-.txt1:hover
+.newsCard:hover
 {
-	opacity: 0.8;
+	opacity: 0.9;
 }
 
-.txt2
-{
-	display:inline-block;
-	background-color: #fff;
-	height: 305px;
-	width: 255px;
-	padding-right: 1px;
-}
-
-.txt2:hover
+.news img:hover
 {
 	opacity: 0.8;
 }
@@ -189,7 +191,7 @@ a:visited
 	display: inline-block;
 }
 
-.wczoraj
+.bgnews
 {
 	height: 26px;
 	width: 682px;
@@ -197,7 +199,7 @@ a:visited
 	margin-top: 20px;
 }
 
-.wczoraj p
+.bgnews p
 {
 	margin-left: 15px;
 	color: #fff;
@@ -206,7 +208,7 @@ a:visited
 	font-size: 15px;
 }
 
-.n1
+.oldnews
 {
 	background-color: #fff;
 	width: 682px;
@@ -214,96 +216,29 @@ a:visited
 	margin-top: -13px;
 }
 
-.kom
+.bgoldnews
+{
+	background-color: #f7f7f7;
+}
+
+.comments
 {
 	float:right;
 	margin-right: 10px;
-}
-
-.kom
-{
 	text-align: right;
 }
 
-.n1:hover
+.oldnews:hover
 {
 	cursor: pointer;
 	background-color: #eee;
 }
 
-.n2:hover
-{
-	cursor: pointer;
-	background-color: #e6e6e6;
-}
-
-.n2
-{
-	background-color: #f7f7f7;
-	width: 682px;
-	height: 24px;
-	margin-top: -13px;
-}
-
-.n3
-{
-	background-color: #fff;
-	width: 682px;
-	height: 24px;
-	margin-top: -13px;
-	padding-bottom: 3px;
-}
-
-.n3:hover
-{
-	cursor: pointer;
-	background-color: #eee;
-}
-
-.n4
-{
-	background-color: #f7f7f7;
-	width: 682px;
-	height: 24px;
-	margin-top: -13px;
-	padding-bottom: 3px;
-}
-
-.n4:hover
-{
-	cursor: pointer;
-	background-color: #eee;
-}
-
-.p1
+.singleOldNews
 {
 	font-size: 13px;
 	margin-left: 15px;
 	padding: 7px 0px;
-}
-
-.p2
-{
-	font-size: 13px;
-	margin-left: 15px;
-	padding: 7px 0px;
-}
-
-.środa
-{
-	height: 26px;
-	width: 682px;
-	background-color: #1f1f7b;
-	margin-top: -13px;
-}
-
-.środa p
-{
-	margin-left: 15px;
-	color: #fff;
-	font-weight: 700;
-	padding-top: 4px;
-	font-size: 15px;
 }
 
 .pack
@@ -311,14 +246,14 @@ a:visited
 	display: inline-block;
 }
 
-.kontuzje
+.injuries
 {
 	display: inline-block;
 	width: 300px;
 	background-color: #fff;
 }
 
-.kontuzja
+.injurie
 {
 	background-color: #f7f7f7;
 }
